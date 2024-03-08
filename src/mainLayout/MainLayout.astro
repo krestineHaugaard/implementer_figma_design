@@ -1,0 +1,40 @@
+---
+import "../styles/global.css";
+const {headtitle} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{headtitle}</title>
+	</head>
+	<body>
+		<header>
+            <a href="/">About</a>
+            <a href="/servicesingle">service</a>
+            <a href="/team">team</a>
+            <a href="/casestudysingle">casestudy</a>
+        </header>
+        <main><slot/></main>
+        <footer class="full-bleed"></footer>
+	</body>
+</html>
+
+<style>
+    body{
+        
+    }
+
+    header, footer{
+        height: 50px;
+        background-color: black;
+    }
+
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+</style>
