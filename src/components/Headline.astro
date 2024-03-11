@@ -1,0 +1,26 @@
+---
+const {backgroundcolor, text} = Astro.props;
+---
+
+<div data-theme={backgroundcolor}>
+ <p >{text}</p>
+</div>
+
+<style>
+    
+    div{
+        inline-size: fit-content;
+        border-radius: 1.25rem;
+    }
+
+    [data-theme="green"]{
+        background-color: var(--primary-color-1-default);
+    }
+
+    [data-theme="yellow"]{
+        background-color: var(--primary-color-2-default);
+    }
+
+    
+
+</style>
