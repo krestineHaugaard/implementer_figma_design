@@ -1,0 +1,38 @@
+---
+const {backgroundcolor, text} = Astro.props;
+---
+
+<button data-theme={backgroundcolor}>
+ <p >{text}
+</button>
+
+<style>
+    
+    button{
+        inline-size: fit-content;
+        border-radius: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        letter-spacing: 0.145rem;
+    }
+
+    [data-theme="primary 1"]{
+        background-color: var(--primary-color-1-default);
+        color: var(--primary-color-3-default);
+        
+        &:hover{
+        background-color: var(--primary-color-3-default);
+        color: var(--gray-scale-05);}
+    }
+
+    [data-theme="primary 3"]{
+        background-color: var(--primary-color-3-default);
+        color: var(--gray-scale-05);
+
+        &:hover{
+        background-color: var(--gray-scale-05);
+        color: var(--primary-color-3-default);
+        border: 2px solid var(--primary-color-3-default);
+        }
+    }
+
+</style>

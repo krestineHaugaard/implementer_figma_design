@@ -66,9 +66,12 @@
   --space-2xl: clamp(3.5rem, 3.3261rem + 0.8696cqi, 4rem);
   --space-3xl: clamp(5.25rem, 4.9891rem + 1.3043cqi, 6rem);
 
-  /* fonts */
+  /* font weight */
 
-  --capin: ;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
 }
 
 body {
