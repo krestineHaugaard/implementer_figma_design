@@ -82,6 +82,7 @@
     [content-start] 1fr [content-end]
     1fr [breakout-end]
     1fr [full-width-end];
+  /* gap: clamp(1rem, , 3rem); */
 }
 
 .content > * {
