@@ -12,21 +12,20 @@ const {headtitle} = Astro.props;
 		<title>{headtitle}</title>
 	</head>
 	<body>
-		<header>
-            <a href="/">About</a>
-            <a href="/servicesingle">service</a>
-            <a href="/team">team</a>
-            <a href="/casestudysingle">casestudy</a>
+		<header class="full-width content">
+            <div>
+                <a href="/">About</a>
+                <a href="/servicesingle">service</a>
+                <a href="/team">team</a>
+                <a href="/casestudysingle">casestudy</a>
+            </div>
         </header>
         <main><slot/></main>
-        <footer class="full-bleed"></footer>
+        <footer class="full-width content"></footer>
 	</body>
 </html>
 
 <style>
-    body{
-        
-    }
 
     header, footer{
         height: 50px;
