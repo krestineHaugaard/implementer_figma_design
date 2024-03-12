@@ -1,0 +1,20 @@
+---
+import Headline from "./Headline.astro";
+import IconBanner from "./IconBanner.astro";
+const {headlinecolor, headlinetext, title, text} = Astro.props;
+---
+
+<article>
+    <div>
+        <Headline backgroundcolor={headlinecolor} text={headlinetext}/>
+    </div>
+    <div>
+        <h5>{title}</h5>
+        <p>{text}</p>
+        <IconBanner/>
+    </div>
+</article>
+
+<style>
+
+</style>

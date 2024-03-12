@@ -1,0 +1,18 @@
+---
+import {Icon} from "astro-icon/components";
+const {text, icon} = Astro.props;
+---
+
+<div>
+    <Icon name={icon}/>
+    <p>{text}</p>
+</div>
+
+
+<style>
+
+    div{
+        display: flex;
+    }
+
+</style>

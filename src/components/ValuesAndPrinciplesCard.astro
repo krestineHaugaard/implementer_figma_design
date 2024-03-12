@@ -1,0 +1,15 @@
+---
+import {Icon} from "astro-icon/components";
+const {title, text, link, icon} = Astro.props;
+---
+
+<article>
+    <Icon name={icon}/>
+    <h6>{title}</h6>
+    <p>{text}</p>
+    <a href={link}>Read More <Icon name="arrow"/></a>
+</article>
+
+<style>
+
+</style>

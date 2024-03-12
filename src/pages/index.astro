@@ -1,12 +1,89 @@
 ---
+import Headline from "../components/Headline.astro";
+import ListItemWithIcon from "../components/ListItemWithIcon.astro";
+import CounterBar from "../components/CounterBar.astro";
 import Button from "../components/Button.astro";
+import ValuesAndPrinciplesCard from "../components/ValuesAndPrinciplesCard.astro";
+import Team3Bar from "../components/Team3Bar.astro";
 import "../styles/global.css";
 import MainLayout from "../mainLayout/MainLayout.astro";
 ---
 
 
 <MainLayout headtitle="About">
-<Button backgroundcolor="primary 1" text="BLOG"></Button>
+    <section class="top-page-element">
+        
+    </section>
+    <section>
+        <div class="grid_1-1">
+            <article>
+                <Headline backgroundcolor="primary 2" text="OUR VISION"></Headline>
+                <h2>Turn your ideas into reality</h2>
+                <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+                <ListItemWithIcon icon="checkmark" text="Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day."/>    
+                <ListItemWithIcon icon="checkmark" text="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital."/>  
+            </article>
+            <article>
+
+            </article>
+            <article>
+                <CounterBar/>
+            </article>
+        </div>
+    </section>
+    <section>
+        <div class="grid_row_1-1">
+            <article>
+                <Headline backgroundcolor="primary 1" text="GROWING WITH OUR CLIENTS"></Headline>
+                <h2>Our core values & principles</h2>
+                <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+                <div>
+                    <Button backgroundcolor="primary 3" text="Get in touch"/>
+                </div>
+            </article>
+            <section>
+                <ValuesAndPrinciplesCard icon="layers" title="Creative Ideas" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." link="/"/>
+                <ValuesAndPrinciplesCard icon="colums" title="Best Features" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." link="/"/>
+                <ValuesAndPrinciplesCard icon="globe" title="Experience" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." link="/"/>
+                <ValuesAndPrinciplesCard icon="nut" title="Easy Solutions" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." link="/"/>
+            </section>
+        </div>
+    </section>
+    <section>
+        <div>
+            <article>
+                <Headline backgroundcolor="primary 2" text="OUR HISTORY"></Headline>
+                <h2>Better Website Means A User Experience</h2>
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </article>
+            <article>
+
+            </article>
+        </div>
+    </section>
+    <section>
+        <div>
+            <article>
+                <Headline backgroundcolor="primary 1" text="OUR TEAM"></Headline>
+                <h2>We champion the bold to achieve the extraordinary</h2>
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team.</p>
+            </article>
+            <section>
+                <Team3Bar/>
+            </section>
+        </div>
+    </section>
+    <section>
+        <div class="grid_1-1">
+            <article>
+                <Headline backgroundcolor="primary 2" text="BOOK NOW"></Headline>
+                <h2>Better Consult, Better Results</h2>
+                <p>Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative - drop us a note and join our team!</p>
+                <Button backgroundcolor="primary 1" text="+800 1234 654"/>
+            </article>
+            <article></article>
+        </div>
+    </section>
 </MainLayout>
 
 <style>
