@@ -1,0 +1,31 @@
+---
+import {Icon} from "astro-icon/components";
+const {cardtheme, icon, title, text} = Astro.props;
+---
+
+<article data-theme={cardtheme}>
+    <Icon name={icon}/>
+    <h6>{title}</h6>
+    <p>{text}</p>
+</article>
+
+<style>
+
+[data-theme="light"]{
+    background-color: var(--gray-scale-1);
+    
+    h6 {color: var(--primary-color-3-default);}
+    p {color: var(--gray-scale-6);}
+
+}
+
+[data-theme="dark"]{
+    background-color: var(--primary-color-3-default);
+    
+    h6 {color: var(--gray-scale-05);}
+    p {color: var(--gray-scale-1);}
+
+}
+
+
+</style>

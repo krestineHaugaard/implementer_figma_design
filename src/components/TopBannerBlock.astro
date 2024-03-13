@@ -1,0 +1,16 @@
+---
+import Headline from "./Headline.astro";
+const {color, headlinetext, text} = Astro.props;
+---
+<article>
+    <Headline backgroundcolor={color}  text={headlinetext}/> 
+    <p>{text}</p>
+</article>
+
+<style>
+
+    article{
+        background-color: var(--transparent-color);
+    }
+
+</style>

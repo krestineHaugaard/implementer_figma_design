@@ -75,18 +75,55 @@
 }
 
 .content {
+  --padding-inline: 1rem;
+  --minimal-max-width: 40ch;
+  --content-small-max-width: 5ch;
+  --breakin-max-width: 15ch;
+  --content-max-width: 10ch;
+  --breakout-max-width: 15ch;
+
+  --full-width-size: minmax(var(--padding-inline), 1fr);
+  --breakout-size: minmax(0, var(--breakout-max-width));
+  --content-size: minmax(0, var(--content-max-width));
+  --breakin-size: minmax(0, var(--breakin-max-width));
+  --content-small-size: minmax(0, var(--content-small-max-width));
+  --minimal-size: min(
+    100% - (var(--padding-inline) * 2),
+    var(--minimal-max-width)
+  );
+
   display: grid;
   grid-template-columns:
-    [full-width-start] 1fr
-    [breakout-start] 1fr
-    [content-start] 1fr [content-end]
-    1fr [breakout-end]
-    1fr [full-width-end];
+    [full-width-start] var(--full-width-size) [breakout-start] var(
+      --breakout-size
+    )
+    [content-start] var(--content-size) [breakin-start] var(--breakin-size) [content-small-start] var(
+      --content-small-size
+    )
+    [minimal-width-start] var(--minimal-size) [minimal-width-end]var(
+      --content-small-size
+    )
+    [content-small-end]var(--breakin-size) [breakin-end]var(--content-size) [content-end] var(
+      --breakout-size
+    )
+    [breakout-end] var(--full-width-size) [full-width-end];
   /* gap: clamp(1rem, , 3rem); */
 }
 
 .content > * {
   grid-column: content;
+}
+
+.content > .minimal-width {
+  grid-column: minimal-width;
+}
+
+.content > .content-small {
+  grid-column: content-small;
+}
+
+.content > .breakin {
+  grid-column: breakin;
 }
 
 .content > .breakout {

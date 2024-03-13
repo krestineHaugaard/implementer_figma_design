@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import HeaderSection from "../components/HeaderSection.astro";
+import FooterSection from "../components/FooterSection.astro";
 const {headtitle} = Astro.props;
 ---
 
@@ -13,27 +15,19 @@ const {headtitle} = Astro.props;
 	</head>
 	<body>
 		<header class="full-width content">
-            <div>
-                <a href="/">About</a>
-                <a href="/servicesingle">service</a>
-                <a href="/team">team</a>
-                <a href="/casestudysingle">casestudy</a>
-            </div>
+            <HeaderSection/>
         </header>
         <main><slot/></main>
-        <footer class="full-width content"></footer>
+        <footer class="full-width content">
+            <FooterSection/>
+        </footer>
 	</body>
 </html>
 
 <style>
 
     header, footer{
-        height: 50px;
         background-color: var(--primary-color-3-default);
     }
 
-    footer{
-        position: fixed;
-        bottom: 0;
-    }
 </style>

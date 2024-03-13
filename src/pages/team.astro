@@ -1,11 +1,30 @@
 ---
+import TopPageSection from "../components/TopPageSection.astro";
+import Button from "../components/Button.astro";
+import TeamBar from "../components/TeamBar.astro";
+import ContactBlock from "../components/ContactBlock.astro";
 import "../styles/global.css";
 import MainLayout from "../mainLayout/MainLayout.astro";
 ---
 
 
-<MainLayout headtitle="noget andet">
-
+<MainLayout headtitle="Team">
+    <div class="content">
+        <TopPageSection imgPath="/src/assets/images/teampage.png" headlinecolor="primary 1" headlinetext="TEAM" text="The Consultors"/>
+        <section>
+            <div>
+                <div>
+                    <h2>Meet Our Great Team</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+                <Button backgroundcolor="primary 3" text="Join our team"/>
+            </div>
+            <TeamBar/>
+        </section>
+        <section>
+            <ContactBlock/>
+        </section>
+    </div>
 </MainLayout>
 
 <style>

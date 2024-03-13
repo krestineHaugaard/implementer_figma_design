@@ -1,0 +1,32 @@
+---
+const {title, text} = Astro.props;
+---
+
+<details>
+    <summary>{title}</summary>
+    <p>{text}</p>
+</details>
+
+
+<style>
+
+details{
+    border-bottom: 1px solid var(--gray-scale-2);
+}
+
+summary{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: var(--primary-color-3-default)
+}
+
+summary::after{
+    content: "+";
+}
+
+details[open] > summary::after{
+    content: "-";
+}
+
+</style>

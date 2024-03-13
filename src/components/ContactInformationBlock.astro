@@ -1,0 +1,20 @@
+---
+import {Icon} from "astro-icon/components";
+const {icon, title, description} = Astro.props;
+---
+
+<dl>
+    <Icon name={icon}/>
+    <div>
+        <dt>{title}</dt>
+        <dl>{description}</dl>
+    </div>
+</dl>
+
+<style>
+
+    dl{
+        display: flex;
+    }
+
+</style>
