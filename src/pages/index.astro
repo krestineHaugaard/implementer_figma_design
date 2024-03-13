@@ -1,10 +1,9 @@
 ---
 import TopPageSection from "../components/TopPageSection.astro";
+import OurVision from "../components/OurVision.astro";
+import GrowingWithOurClients from "../components/GrowingWithOurClients.astro";
 import Headline from "../components/Headline.astro";
-import ListItemWithIcon from "../components/ListItemWithIcon.astro";
-import CounterBar from "../components/CounterBar.astro";
 import Button from "../components/Button.astro";
-import ValuesAndPrinciplesCard from "../components/ValuesAndPrinciplesCard.astro";
 import Team3Bar from "../components/Team3Bar.astro";
 import "../styles/global.css";
 import MainLayout from "../mainLayout/MainLayout.astro";
@@ -14,41 +13,8 @@ import MainLayout from "../mainLayout/MainLayout.astro";
 <MainLayout headtitle="About">
 <div class="content">
     <TopPageSection imgPath="/src/assets/images/aboutpage.png" headlinecolor="primary 1" headlinetext="SERVICES" text="Creative Services For Boost Your Business Growth"/>
-    <section>
-        <div class="grid_1-1">
-            <article class="breakout">
-                <Headline backgroundcolor="primary 2" text="OUR VISION"></Headline>
-                <h2>Turn your ideas into reality</h2>
-                <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
-                <ListItemWithIcon icon="checkmark" text="Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day."/>    
-                <ListItemWithIcon icon="checkmark" text="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital."/>  
-            </article>
-            <article>
-
-            </article>
-            <article>
-                <CounterBar/>
-            </article>
-        </div>
-    </section>
-    <section>
-        <div class="grid_row_1-1">
-            <article>
-                <Headline backgroundcolor="primary 1" text="GROWING WITH OUR CLIENTS"></Headline>
-                <h2>Our core values & principles</h2>
-                <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
-                <div>
-                    <Button backgroundcolor="primary 3" text="Get in touch"/>
-                </div>
-            </article>
-            <section>
-                <ValuesAndPrinciplesCard icon="layers" title="Creative Ideas" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." link="/"/>
-                <ValuesAndPrinciplesCard icon="colums" title="Best Features" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." link="/"/>
-                <ValuesAndPrinciplesCard icon="globe" title="Experience" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." link="/"/>
-                <ValuesAndPrinciplesCard icon="nut" title="Easy Solutions" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." link="/"/>
-            </section>
-        </div>
-    </section>
+    <OurVision/>
+    <GrowingWithOurClients/>
     <section>
         <div>
             <article>

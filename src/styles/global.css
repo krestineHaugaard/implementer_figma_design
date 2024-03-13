@@ -134,6 +134,6 @@
   grid-column: full-width;
 }
 
-section > * + * {
+.flow > * + * {
   margin-top: var(--flow-space, 1rem);
 }
