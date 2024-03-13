@@ -137,3 +137,39 @@
 .flow > * + * {
   margin-top: var(--flow-space, 1rem);
 }
+
+h1 {
+  --flow-space: ;
+  font-size: ;
+}
+
+h2 {
+  --flow-space: ;
+  font-size: ;
+}
+
+h3 {
+  --flow-space: ;
+  font-size: ;
+}
+
+h4 {
+  --flow-space: ;
+  font-size: ;
+}
+
+h5 {
+  --flow-space: ;
+  font-size: ;
+}
+
+h6 {
+  --flow-space: ;
+  font-size: ;
+}
+
+p:not(button) {
+  --flow-space: ;
+  font-size: ;
+  color: var(--gray-scale-6);
+}

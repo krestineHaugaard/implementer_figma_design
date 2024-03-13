@@ -1,12 +1,11 @@
 ---
 import TopPageSection from "../components/TopPageSection.astro";
-import FinancialProjectionsCardsSection from "../components/FinancialProjectionsCardsSection.astro";
+import FinancialProjections from "../components/FinancialProjections.astro";
 import Headline from "../components/Headline.astro";
 import ListItemWithIcon from "../components/ListItemWithIcon.astro";
 import ClientsLogoBar from "../components/ClientsLogoBar.astro";
 import ContactInformationBlock from "../components/ContactInformationBlock.astro";
 import FAQDropDown from "../components/FAQDropDown.astro";
-import {Icon} from "astro-icon/components";
 import "../styles/global.css";
 import MainLayout from "../mainLayout/MainLayout.astro";
 ---
@@ -15,22 +14,7 @@ import MainLayout from "../mainLayout/MainLayout.astro";
 <MainLayout headtitle="Service single">
 <div class="content">
     <TopPageSection imgPath="/src/assets/images/servicesinglepage.png" headlinecolor="primary 1" headlinetext="SERVICES SINGLE" text="Services Details"/>
-    <section>
-        <div>
-            <article>
-                <Icon name="presentation"/>
-                <h2>Financial Projections</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <div>
-                    <Icon name="arrowbuttonleft"/>
-                    <Icon name="arrowbuttonright"/>
-                </div>
-            </article>
-            <article>
-                <FinancialProjectionsCardsSection/>
-            </article>
-        </div>
-    </section>
+    <FinancialProjections/>
     <section>
         <div>
             <article></article>

@@ -2,55 +2,23 @@
 import TopPageSection from "../components/TopPageSection.astro";
 import OurVision from "../components/OurVision.astro";
 import GrowingWithOurClients from "../components/GrowingWithOurClients.astro";
-import Headline from "../components/Headline.astro";
-import Button from "../components/Button.astro";
-import Team3Bar from "../components/Team3Bar.astro";
+import OutHistory from "../components/OurHistory.astro";
+import OurTeam from "../components/OurTeam.astro";
+import BetterConsultBetterResults from "../components/BetterConsultBetterResults.astro";
 import "../styles/global.css";
 import MainLayout from "../mainLayout/MainLayout.astro";
 ---
 
 
 <MainLayout headtitle="About">
-<div class="content">
-    <TopPageSection imgPath="/src/assets/images/aboutpage.png" headlinecolor="primary 1" headlinetext="SERVICES" text="Creative Services For Boost Your Business Growth"/>
-    <OurVision/>
-    <GrowingWithOurClients/>
-    <section>
-        <div>
-            <article>
-                <Headline backgroundcolor="primary 2" text="OUR HISTORY"></Headline>
-                <h2>Better Website Means A User Experience</h2>
-                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
-            </article>
-            <article>
-
-            </article>
-        </div>
-    </section>
-    <section>
-        <div>
-            <article>
-                <Headline backgroundcolor="primary 1" text="OUR TEAM"></Headline>
-                <h2>We champion the bold to achieve the extraordinary</h2>
-                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team.</p>
-            </article>
-            <section>
-                <Team3Bar/>
-            </section>
-        </div>
-    </section>
-    <section>
-        <div class="grid_1-1">
-            <article>
-                <Headline backgroundcolor="primary 2" text="BOOK NOW"></Headline>
-                <h2>Better Consult, Better Results</h2>
-                <p>Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative - drop us a note and join our team!</p>
-                <Button backgroundcolor="primary 1" text="+800 1234 654"/>
-            </article>
-            <article></article>
-        </div>
-    </section>
-</div>
+    <div class="content">
+        <TopPageSection imgPath="/src/assets/images/aboutpage.png" headlinecolor="primary 1" headlinetext="SERVICES" text="Creative Services For Boost Your Business Growth"/>
+        <OurVision/>
+        <GrowingWithOurClients/>
+        <OutHistory/>
+        <OurTeam/>
+        <BetterConsultBetterResults/>
+    </div>
 </MainLayout>
 
 <style>
