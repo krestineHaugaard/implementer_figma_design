@@ -63,8 +63,8 @@
   --space-m: clamp(1.3125rem, 1.2473rem + 0.3261cqi, 1.5rem);
   --space-l: clamp(1.75rem, 1.663rem + 0.4348cqi, 2rem);
   --space-xl: clamp(2.625rem, 2.4946rem + 0.6522cqi, 3rem);
-  --space-2xl: clamp(3.5rem, 3.3261rem + 0.8696cqi, 4rem);
-  --space-3xl: clamp(5.25rem, 4.9891rem + 1.3043cqi, 6rem);
+  --space-2xl: clamp(3.5rem, 3.3261rem + 0.8696vi, 4rem);
+  --space-3xl: clamp(5.25rem, 4.9891rem + 1.3043vi, 6rem);
 
   /* font weight */
 
@@ -72,66 +72,49 @@
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
-}
 
-.content {
+  /* grid layout */
+
   --padding-inline: 1rem;
-  --minimal-max-width: 40ch;
-  --content-small-max-width: 5ch;
-  --breakin-max-width: 15ch;
-  --content-max-width: 10ch;
-  --breakout-max-width: 15ch;
+  --content-max-width: 100ch;
+  --breakout-max-width: 10ch;
 
   --full-width-size: minmax(var(--padding-inline), 1fr);
   --breakout-size: minmax(0, var(--breakout-max-width));
-  --content-size: minmax(0, var(--content-max-width));
-  --breakin-size: minmax(0, var(--breakin-max-width));
-  --content-small-size: minmax(0, var(--content-small-max-width));
-  --minimal-size: min(
-    100% - (var(--padding-inline) * 2),
-    var(--minimal-max-width)
+  --content-size: min(
+    100% - (var(--padding-inline) / 2),
+    var(--content-max-width)
   );
+}
 
+.content {
   display: grid;
   grid-template-columns:
-    [full-width-start] var(--full-width-size) [breakout-start] var(
-      --breakout-size
-    )
-    [content-start] var(--content-size) [breakin-start] var(--breakin-size) [content-small-start] var(
-      --content-small-size
-    )
-    [minimal-width-start] var(--minimal-size) [minimal-width-end]var(
-      --content-small-size
-    )
-    [content-small-end]var(--breakin-size) [breakin-end]var(--content-size) [content-end] var(
-      --breakout-size
-    )
-    [breakout-end] var(--full-width-size) [full-width-end];
-  /* gap: clamp(1rem, , 3rem); */
+    [full-width-start] var(--full-width-size)
+    [breakout-start] var(--breakout-size)
+    [content-start] var(--content-size) [content-end]
+    var(--breakout-size) [breakout-end]
+    var(--full-width-size) [full-width-end];
 }
 
 .content > * {
   grid-column: content;
 }
 
-.content > .minimal-width {
-  grid-column: minimal-width;
-}
-
-.content > .content-small {
-  grid-column: content-small;
-}
-
-.content > .breakin {
-  grid-column: breakin;
-}
-
-.content > .breakout {
+.content .breakout {
   grid-column: breakout;
 }
 
-.content > .full-width {
+.content .full-width {
   grid-column: full-width;
+}
+
+body {
+  color: var(--primary-color-3-default);
+}
+
+section + * {
+  margin-block: var(--space-3xl, 1rem);
 }
 
 .flow > * + * {
@@ -139,37 +122,81 @@
 }
 
 h1 {
-  --flow-space: ;
-  font-size: ;
+  --flow-space: var(--space-m);
+  font-size: var(--step-5);
+  font-weight: var(--font-bold);
+  max-width: 20ch;
 }
 
 h2 {
-  --flow-space: ;
-  font-size: ;
+  --flow-space: var(--space-m);
+  font-size: var(--step-4);
+  font-weight: var(--font-bold);
+  max-width: 25ch;
 }
 
 h3 {
-  --flow-space: ;
-  font-size: ;
+  --flow-space: var(--space-xl);
+  font-size: var(--step-3);
+  font-weight: var(--font-bold);
+  max-width: 30ch;
 }
 
 h4 {
-  --flow-space: ;
-  font-size: ;
+  --flow-space: var(--space-2xl);
+  font-size: var(--step-2);
+  font-weight: var(--font-bold);
+  max-width: 30ch;
 }
 
 h5 {
-  --flow-space: ;
-  font-size: ;
+  --flow-space: var(--space-m);
+  font-size: var(--step-1);
+  font-weight: var(--font-semi-bold);
+  max-width: 30ch;
 }
 
-h6 {
-  --flow-space: ;
-  font-size: ;
+p {
+  --flow-space: var(--space-s);
+  font-size: var(--step-0);
+  color: var(--gray-scale-7);
+  max-width: 75ch;
 }
 
-p:not(button) {
-  --flow-space: ;
-  font-size: ;
-  color: var(--gray-scale-6);
+ul {
+  --flow-space: var(--space-xl);
+  list-style: none;
+  padding-left: 1rem;
+}
+
+li {
+  --flow-space: var(--space-s);
+  font-size: var(--step-0);
+  color: var(--gray-scale-7);
+  max-width: 75ch;
+}
+
+ul li:before {
+  content: "•";
+  padding-right: 0.7rem;
+  font-size: 1rem;
+}
+
+a,
+a:visited {
+  --flow-space: var(--space-s);
+  font-size: var(--step-0);
+  text-decoration: none;
+  font-weight: var(--font-semi-bold);
+  color: var(--primary-color-3-default);
+}
+
+a:hover,
+a:active {
+  text-decoration: underline;
+  color: var(--gray-scale-5);
+}
+
+.image {
+  margin-top: var(--space-xl, 1rem);
 }

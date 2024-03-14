@@ -17,9 +17,9 @@ if (!images[imgPath])
 <section class="full-width">
     <Image src={images[imgPath]()} alt="headline image"/>
     <div class="content">
-        <article>
+        <article class="flow">
             <Headline backgroundcolor={headlinecolor}  text={headlinetext}/> 
-            <p>{text}</p>
+            <h1>{text}</h1>
         </article>
     </div>
 </section>
@@ -36,6 +36,7 @@ section{
 
 article{
     background-color: var(--transparent-color);
+    backdrop-filter: blur(5.5px);
     inline-size: fit-content;
     border-radius: 10px;
     padding: 2rem 3rem;

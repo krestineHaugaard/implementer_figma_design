@@ -22,8 +22,10 @@ if (!images[imgPath])
     <div class="headline">
         <Headline backgroundcolor={headlinecolor} text={headlinetext}/>
     </div>
-    <h5>{title}</h5>
-    <p>{text}</p>
+    <div class="flow">
+        <h4>{title}</h4>
+        <p>{text}</p>
+    </div>
     <IconBanner/>
 </article>
 
@@ -31,12 +33,12 @@ if (!images[imgPath])
 
 article{
     display: grid;
-    justify-items: center;
-    gap: 1rem;
+    gap: var(--space-xs);
 }
 
-p{
+p, h4{
     text-align: center;
+    --flow-space: var(--space-2xs);
 }
 
 .image, .headline{

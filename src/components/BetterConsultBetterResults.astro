@@ -3,27 +3,43 @@ import Headline from "../components/Headline.astro";
 import Button from "../components/Button.astro";
 ---
 
-<section>
-    <article>
-        <Headline backgroundcolor="primary 2" text="BOOK NOW"></Headline>
-        <h2>Better Consult, Better Results</h2>
-        <p>Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative - drop us a note and join our team!</p>
-        <Button backgroundcolor="primary 1" text="+800 1234 654"/>
-    </article>
-    <article>
+<section class="content">
+    <div>
+        <article class="flow">
+            <Headline backgroundcolor="primary 2" text="BOOK NOW"></Headline>
+            <h2>Better Consult, <span>Better</span> Results</h2>
+            <p>Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative - drop us a note and join our team!</p>
+            <Button backgroundcolor="primary 1" text="+800 1234 654"/>
+        </article>
+        <article>
 
-    </article>
+        </article>
+    </div>    
 </section>
 
 <style>
 
     section{
-        display:grid;
-        grid-template-columns: 1fr 1fr;
         background-color: var(--primary-color-3-default);
-        color: var(--gray-scale-05);
         border-radius: 2rem;
-        padding-inline: 4rem;
+    }
+    
+    div{
+       display:grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: var(--space-l); 
+    }
+
+    .flow{
+        align-self: center;
+    }
+
+    h2, p{
+        color: var(--gray-scale-05);
+    }
+
+    span{
+        color: var(--gray-scale-6);
     }
 
 </style>

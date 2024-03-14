@@ -3,14 +3,32 @@ import {Icon} from "astro-icon/components";
 const {title, text, link, icon} = Astro.props;
 ---
 
-<article>
+<article class="flow">
     <Icon name={icon}/>
-    <h6>{title}</h6>
+    <h5>{title}</h5>
     <p>{text}</p>
-    <a href={link}>Read More <Icon name="arrow"/></a>
+    <div>
+        <a href={link}>Read More</a>
+        <Icon name="arrow"/>
+    </div>
 </article>
 
 <style>
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+div{
+    display: flex;
+    align-items: center;
+    gap: var(--space-2xs);
+}
+
+h5 {
+  --flow-space: var(--space-2);
+}
 
 [data-icon="arrow"] {
     width: 1rem;

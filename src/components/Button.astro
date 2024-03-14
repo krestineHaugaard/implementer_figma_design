@@ -11,8 +11,11 @@ const {backgroundcolor, text, icon} = Astro.props;
     button{
         inline-size: fit-content;
         border-radius: 1.5rem;
-        padding: 0.5rem 1.5rem;
+        padding-block: var(--space-xs);
+        padding-inline: var(--space-m);
         letter-spacing: 0.145rem;
+        font-weight: var(--font-semi-bold);
+        font-size: var(--step-0); 
     }
 
     [data-theme="primary 1"]{

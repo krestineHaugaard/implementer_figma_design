@@ -3,9 +3,9 @@ import {Icon} from "astro-icon/components";
 import FinancialProjectionsCardsSection from "../components/FinancialProjectionsCardsSection.astro";
 ---
 
-<section>
+
     <article class="grid">
-        <div >
+        <div class="flow">
             <Icon name="presentation"/>
             <h2>Financial Projections</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -15,26 +15,20 @@ import FinancialProjectionsCardsSection from "../components/FinancialProjections
             <Icon name="arrowbuttonright"/>
         </div>
     </article>
-    <article>
-        <FinancialProjectionsCardsSection/>
-    </article>
-</section>
+    <FinancialProjectionsCardsSection/>
+
 
 
 <style>
 
     [data-icon="arrowbuttonleft"], [data-icon="arrowbuttonright"]{
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 3rem;
+        width: 3rem;
     }
     
     [data-icon="presentation"]{
-        height: 4rem;
-        width: 4rem;
-    }
-
-    p{
-       max-width: 70ch; 
+        height: 4.5rem;
+        width: 4.5rem;
     }
 
     .grid{

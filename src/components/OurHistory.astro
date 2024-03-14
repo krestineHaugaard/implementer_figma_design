@@ -2,17 +2,18 @@
 import Headline from "../components/Headline.astro";
 ---
 
-<section>
-    <article>
-        <Headline backgroundcolor="primary 2" text="OUR HISTORY"></Headline>
-        <h2>Better Website Means A User Experience</h2>
-        <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
-    </article>
-    <article>
-
-    </article>
+<section class="flow">
+    <Headline backgroundcolor="primary 2" text="OUR HISTORY"></Headline>
+    <h2>Better Website Means A User Experience</h2>
+    <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
 </section>
 
 <style>
-    
+
+section{
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
 </style>

@@ -6,7 +6,7 @@ import ValuesAndPrinciplesCard from "../components/ValuesAndPrinciplesCard.astro
 
 <section >
     <article class="big-grid">
-        <div>
+        <div class="flow">
             <Headline backgroundcolor="primary 1" text="GROWING WITH OUR CLIENTS"></Headline>
             <h2>Our core values & principles</h2>
             <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
@@ -14,20 +14,21 @@ import ValuesAndPrinciplesCard from "../components/ValuesAndPrinciplesCard.astro
         <div class="grid-end">
             <Button backgroundcolor="primary 3" text="Get in touch"/>
         </div>
+        <div class="grid">
+            <ValuesAndPrinciplesCard icon="layers" title="Creative Ideas" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." link="/"/>
+            <ValuesAndPrinciplesCard icon="colums" title="Best Features" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." link="/"/>
+            <ValuesAndPrinciplesCard icon="globe" title="Experience" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." link="/"/>
+            <ValuesAndPrinciplesCard icon="nut" title="Easy Solutions" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." link="/"/>
+        </div>
     </article>
-    <section class="grid">
-        <ValuesAndPrinciplesCard icon="layers" title="Creative Ideas" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." link="/"/>
-        <ValuesAndPrinciplesCard icon="colums" title="Best Features" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." link="/"/>
-        <ValuesAndPrinciplesCard icon="globe" title="Experience" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam." link="/"/>
-        <ValuesAndPrinciplesCard icon="nut" title="Easy Solutions" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." link="/"/>
-    </section>
 </section>
 
 <style>
 
     .big-grid{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--space-2xl);
     }
 
     .grid-end{
@@ -35,8 +36,10 @@ import ValuesAndPrinciplesCard from "../components/ValuesAndPrinciplesCard.astro
     }
 
     .grid{
+        grid-column: span 2;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: var(--space-l)
     }
 
 </style>

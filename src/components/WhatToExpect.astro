@@ -1,0 +1,23 @@
+---
+import Headline from "../components/Headline.astro";
+import ListItemWithIcon from "../components/ListItemWithIcon.astro";
+---
+
+<section>
+    <article></article>
+    <article class="flow">
+        <Headline backgroundcolor="primary 1" text="WE'LL WORK WITH YOU"/>
+        <h2>What To Expect</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <ListItemWithIcon icon="checkmark" text="Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day."/>
+        <ListItemWithIcon icon="checkmark" text="Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital."/>
+    </article>
+</section>
+
+<style>
+    section{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-l);
+    }
+</style>
