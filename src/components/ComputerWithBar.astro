@@ -1,0 +1,60 @@
+---
+import Button from "./Button.astro";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/**/*.{jpeg,jpg,png,gif}"
+);
+---
+
+<section>
+    <Image src={images["/src/assets/images/computer.png"]()} alt="Computer"/>
+    <article>
+        <div class="flex">
+            <div>
+                <h5>Case Name</h5>
+                <p>Taxes & Efficiency</p>
+            </div>
+            <div>
+                <h5>Category</h5>
+                <p>Business</p>
+            </div>
+            <div>
+                <h5>Date</h5>
+                <p>27th September 2022</p>
+            </div>
+        </div>
+        <Button backgroundcolor="primary 1" text="Live Preview"/>
+    </article>
+</section>
+
+<style>
+
+    section{
+        display: grid;
+        margin-bottom: 0rem;
+    }
+
+    article{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-color-3-default);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-inline: 3rem;
+        margin-top: -2rem;
+        
+    }
+
+    .flex{
+        display: flex;
+        gap: 3rem;
+    }
+
+    h5, p{
+        color: var(--gray-scale-05);
+    }
+
+</style>

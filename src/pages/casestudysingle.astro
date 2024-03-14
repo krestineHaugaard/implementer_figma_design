@@ -2,6 +2,7 @@
 import TopPageSection from "../components/TopPageSection.astro";
 import NewsletterSubscribeBlock from "../components/NewsletterSubscribeBlock.astro";
 import MoreCaseStudiesBlock from "../components/MoreCaseStudiesBlock.astro";
+import ComputerWithBar from "../components/ComputerWithBar.astro";
 import "../styles/global.css";
 import MainLayout from "../mainLayout/MainLayout.astro";
 import type { ImageMetadata } from "astro";
@@ -16,8 +17,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 <MainLayout headtitle="Case study single">
     <div class="content">
         <TopPageSection imgPath="/src/assets/images/casestudysinglepage.png" headlinecolor="primary 1" headlinetext="CASE STUDIES SINGLE" text="Taxes & Efficiency"/>
-        
-        <section class="content-small flow">
+        <ComputerWithBar/>
+        <section class="flow">
             <h2>Project Overview</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
             <ul class="flow">
@@ -36,15 +37,20 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
             <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
             <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
         </section>
-        <section>
-            <NewsletterSubscribeBlock/>
-        </section>
-        <section>
-            <MoreCaseStudiesBlock/>
-        </section>
+        <NewsletterSubscribeBlock/>
+        <MoreCaseStudiesBlock/>
     </div>
 </MainLayout>
 
 <style>
+
+    .flow:not(ul){
+        padding-inline: var(--space-3xl);
+    }
+
+    .image {
+        margin-top: var(--space-xl, 1rem);
+        margin-inline: var(--space-xl, 1rem);
+    }
 
 </style>

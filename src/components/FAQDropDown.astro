@@ -2,7 +2,7 @@
 const {title, text} = Astro.props;
 ---
 
-<details class="flow">
+<details>
     <summary><h5>{title}</h5></summary>
     <p>{text}</p>
 </details>
@@ -11,8 +11,8 @@ const {title, text} = Astro.props;
 <style>
 
 details{
-    border-bottom: 1px solid var(--gray-scale-2);
-    padding-block: var(--space-m);
+    border-bottom: 1px solid var(--gray-scale-1);
+    padding-block: var(--space-s);
 }
 
 h5{
@@ -22,18 +22,19 @@ h5{
 summary{
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     list-style: none;
     color: var(--primary-color-3-default)
 }
 
 summary::after{
     content: "+";
-    font-size: var(--step-3);
+    font-size: var(--step-4);
 }
 
 details[open] > summary::after{
     content: "-";
-    font-size: var(--step-4);
+    font-size: var(--step-5);
 }
 
 </style>

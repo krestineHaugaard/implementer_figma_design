@@ -11,22 +11,36 @@ import MainLayout from "../mainLayout/MainLayout.astro";
 <MainLayout headtitle="Team">
     <div class="content">
         <TopPageSection imgPath="/src/assets/images/teampage.png" headlinecolor="primary 1" headlinetext="TEAM" text="The Consultors"/>
-        <section>
-            <div>
-                <div>
-                    <h2>Meet Our Great Team</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
-                </div>
+        <div class="grid">
+            <div class="flow">
+                <h2>Meet Our Great Team</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+            <div class="btn">
                 <Button backgroundcolor="primary 3" text="Join our team"/>
             </div>
-            <TeamBar/>
-        </section>
-        <section>
-            <ContactBlock/>
-        </section>
+            <div class="teambar">
+                <TeamBar/>
+            </div>
+        </div>
+        <ContactBlock/>
     </div>
 </MainLayout>
 
 <style>
+
+    .grid{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        row-gap: 3rem;
+    }
+
+    .btn{
+        place-self: end;  
+    }
+
+    .teambar{
+        grid-column: span 2;
+    }
 
 </style>

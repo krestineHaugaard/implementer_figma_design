@@ -5,7 +5,9 @@ import FAQDropDown from "../components/FAQDropDown.astro";
 
 
 <section class="flow">
-    <Headline backgroundcolor="primary 2" text="FAQ"/>
+    <div>
+        <Headline backgroundcolor="primary 2" text="FAQ"/>
+    </div>
     <h2>Customer Questions</h2>
     <section class="faq">
         <FAQDropDown title="What will happen when I’ve sent my application?" text="Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements."/>
@@ -21,5 +23,11 @@ import FAQDropDown from "../components/FAQDropDown.astro";
     .flow{
         width: minmax (0ch, 100ch);
         display: grid;
+        margin-inline: var(--space-2xl);
     }
+
+    h2, div{
+        justify-self: center;
+    }
+
 </style>

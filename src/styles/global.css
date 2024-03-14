@@ -160,7 +160,7 @@ p {
   --flow-space: var(--space-s);
   font-size: var(--step-0);
   color: var(--gray-scale-7);
-  max-width: 75ch;
+  max-width: 70ch;
 }
 
 ul {
@@ -195,8 +195,4 @@ a:hover,
 a:active {
   text-decoration: underline;
   color: var(--gray-scale-5);
-}
-
-.image {
-  margin-top: var(--space-xl, 1rem);
 }

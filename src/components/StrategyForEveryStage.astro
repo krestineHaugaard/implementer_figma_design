@@ -2,7 +2,7 @@
 import Headline from "../components/Headline.astro";
 ---
 
-<section class="flow">
+<section class="flow full-width content">
     <Headline backgroundcolor="primary 2" text="OUR HISTORY"/>
     <h2>Strategy for Every Stage in the Client's Journey</h2>
 </section>
@@ -12,10 +12,13 @@ import Headline from "../components/Headline.astro";
 section{
     display: grid;
     justify-items: center;
+    background-color: var(--primary-color-3-default);
+    padding-block: var(--space-3xl, 1rem);
 }
 
 h2{
     text-align: center;
+    color: var(--gray-scale-05);
 }
 
 </style>

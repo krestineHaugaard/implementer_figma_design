@@ -9,8 +9,8 @@
         <p>Build stronger Customer Relationships with Consultalk</p>
     </div>
     <label>
-        <input type="email" name="email" placeholder="Your mail address">
-        <input type="submit" name="submitbtn" value="Subscribe">
+        <input type="email" id="email" placeholder="Your mail address">
+        <input type="submit" id="submitbtn" value="Subscribe">
     </label>
 </article>
 
@@ -18,10 +18,36 @@
 
 article{
     display: flex;
+    background-color: var(--primary-color-3-default);
+    border-radius: 1rem;
+    padding: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+}
+
+h3, p{
+    color: var(--gray-scale-05);
 }
 
 label{
     display: flex;
+    gap: 1rem;
+}
+
+#email{
+    background-color: var(--gray-scale-05);
+    padding-block: var(--space-s);
+    padding-inline: var(--space-m);
+    border-radius: 2rem;
+}
+
+#submitbtn{
+    background-color: var(--primary-color-1-default);
+    color: var(--primary-color-3-default);
+    padding-block: var(--space-s);
+    padding-inline: var(--space-m);
+    border-radius: 2rem;
 }
 
 </style>

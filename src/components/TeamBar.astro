@@ -3,15 +3,22 @@ import TeamBarCard from "./TeamBarCard.astro";
 ---
 
 <section>
-    <TeamBarCard headlinecolor="primary 1" headlinetext="CEO at Company" title="Sarah Jasmine" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
-    <TeamBarCard headlinecolor="primary 3" headlinetext="Manager" title="John Carter" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
-    <TeamBarCard headlinecolor="primary 3" headlinetext="CEO at Company" title="Daisy Stella" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
-    <TeamBarCard headlinecolor="primary 3" headlinetext="CEO at Company" title="Maya Elizabeth" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
-    <TeamBarCard headlinecolor="primary 3" headlinetext="CEO at Company" title="Ryan Jackson" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
-    <TeamBarCard headlinecolor="primary 3" headlinetext="CEO at Company" title="Lilly Victoria" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
+    <TeamBarCard imgPath="/src/assets/images/sarahjasmine.png" headlinecolor="primary 1" headlinetext="CEO at Company" title="Sarah Jasmine" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
+    <TeamBarCard imgPath="/src/assets/images/johncarter.png" headlinecolor="primary 3" headlinetext="Manager" title="John Carter" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
+    <TeamBarCard imgPath="/src/assets/images/daisystella.png" headlinecolor="primary 3" headlinetext="CEO at Company" title="Daisy Stella" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
+    <TeamBarCard imgPath="/src/assets/images/mayaelizabeth.png" headlinecolor="primary 3" headlinetext="CEO at Company" title="Maya Elizabeth" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
+    <TeamBarCard imgPath="/src/assets/images/ryanjackson.png" headlinecolor="primary 3" headlinetext="CEO at Company" title="Ryan Jackson" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
+    <TeamBarCard imgPath="/src/assets/images/lillyvictoria.png" headlinecolor="primary 3" headlinetext="CEO at Company" title="Lilly Victoria" text="Leverage agile frameworks to provide a robust synopsis for high level overviews."/>
 </section>
 
 
 <style>
+
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        row-gap: 3rem;
+    }
 
 </style>

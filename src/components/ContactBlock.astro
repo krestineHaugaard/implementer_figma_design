@@ -3,17 +3,54 @@ import Headline from "./Headline.astro";
 
 ---
 
-<article>
-    <Headline backgroundcolor="gray scale 8" text="CONTACT"/>
-    <h2>Ready To Talk?</h2>
-    <p>Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Massa placerat duis ultricies lacus sed turpis. Pellentesque  pellentesque habitant morbi tristique.</p>
-    <label for="mail">
-        <input type="email" id="mail" name="mail" placeholder="Your mail address">
-        <input type="submit" id="submitbtn" name="mail" value="Send Meassage">
-    </label>
+<section>
+    <article class="flow">
+        <Headline backgroundcolor="gray scale 8" text="CONTACT"/>
+        <h2>Ready To Talk?</h2>
+        <p>Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Massa placerat duis ultricies lacus sed turpis. Pellentesque  pellentesque habitant morbi tristique.</p>
+        <label>
+            <input type="email" id="mail" name="mail" placeholder="Your mail address">
+            <input type="submit" id="submitbtn" name="mail" value="Send Meassage">
+        </label>
+    </article>
+    <article>
 
-</article>
+    </article>
+</section>
 
 <style>
+
+    section{
+        background-color: var(--primary-color-3-default);
+        margin-bottom: var(--space-3xl, 1rem);
+        border-radius: 1rem;
+        padding-inline: var(--space-xl);
+        padding-block: var(--space-3xl, 1rem);
+    }
+
+    h2, p{
+        color: var(--gray-scale-05);
+    }
+
+    label{
+        display: flex;
+        gap: 1rem;
+    }
+
+    #mail{
+        background-color: var(--gray-scale-05);
+        padding-block: var(--space-s);
+        padding-inline: var(--space-m);
+        border-radius: 2rem;
+
+    }
+
+    #submitbtn{
+        background-color: var(--primary-color-2-default);
+        color: var(--gray-scale-05);
+        padding-block: var(--space-s);
+        padding-inline: var(--space-m);
+        border-radius: 2rem;
+    }
 
 </style>
